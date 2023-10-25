@@ -109,6 +109,7 @@
 |  |  |  |- 📂 train:
 |  |  |  |  |- 📜 index.tsx
 |  |  |  |  |- 📜 [train_space_id].tsx
+|  |  |  |- 📜 beginner.tsx
 |  |  |  |- 📜 dashboard.tsx
 |  |  |  |- 📜 LearnContent.tsx
 |  |  |  |- 📜 _document.tsx
