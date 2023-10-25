@@ -35,8 +35,9 @@ def super_cool_awesome_endpoint(request: HttpRequest):
     return 200, {"message": "Welcome to my super cool awesome endpoint"}
 
 
-api.add_router("/datasets/default/", get_default_datasets_router())
-api.add_router("/tabular", get_tabular_router())
+api.add_router("/datasets/default/", default_dataset_router)
+api.add_router("/tabular", tabular_router)
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
