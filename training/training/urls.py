@@ -30,6 +30,11 @@ def test(request: HttpRequest):
     return 200, {"result": "200 Backend surface test successful"}
 
 
+@api.get("/super_cool_awesome_endpoint")
+def super_cool_awesome_endpoint(request: HttpRequest):
+    return 200, {"message": "Welcome to my super cool awesome endpoint"}
+
+
 api.add_router("/datasets/default/", get_default_datasets_router())
 api.add_router("/tabular", get_tabular_router())
 
