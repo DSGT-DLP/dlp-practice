@@ -30,6 +30,10 @@ export const STEP_SETTINGS = {
       { label: "Classification", value: "CLASSIFICATION" },
       { label: "Regression", value: "REGRESSION" },
     ],
+    randomButtons: [
+      { label: "Option 1", value: "OPTION_1" },
+      { label: "Option 2", value: "OPTION_2" },
+    ],
     criterions: [
       {
         label: "L1 (Absolute Error) Loss",

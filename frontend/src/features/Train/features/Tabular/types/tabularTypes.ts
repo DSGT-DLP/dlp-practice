@@ -32,6 +32,7 @@ export interface ParameterData {
   targetCol: string;
   features: string[];
   problemType: (typeof STEP_SETTINGS)["PARAMETERS"]["problemTypes"][number]["value"];
+  randomButton: (typeof STEP_SETTINGS)["PARAMETERS"]["randomButtons"][number]["value"];
   criterion: (typeof STEP_SETTINGS)["PARAMETERS"]["criterions"][number]["value"];
   optimizerName: (typeof STEP_SETTINGS)["PARAMETERS"]["optimizers"][number]["value"];
   shuffle: boolean;

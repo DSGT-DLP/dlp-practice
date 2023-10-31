@@ -252,6 +252,7 @@ const Login = () => {
   }
 
   if (user !== undefined) {
+    console.log(email);
     return <></>;
   }
 

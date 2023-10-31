@@ -63,6 +63,7 @@ const TabularParametersStep = ({
         trainspace?.parameterData?.targetCol ?? (null as unknown as undefined),
       features: trainspace?.parameterData?.features ?? [],
       problemType: trainspace?.parameterData?.problemType ?? "CLASSIFICATION",
+      randomButton: trainspace?.parameterData?.randomButton ?? "OPTION_1",
       criterion: trainspace?.parameterData?.criterion ?? "CELOSS",
       optimizerName: trainspace?.parameterData?.optimizerName ?? "SGD",
       shuffle: trainspace?.parameterData?.shuffle ?? true,
@@ -183,6 +184,26 @@ const TabularParametersStep = ({
                   value={problemType.value}
                   control={<Radio />}
                   label={problemType.label}
+                />
+              ))}
+            </RadioGroup>
+          )}
+        />
+      </FormControl>
+      <FormControl>
+        <FormLabel>Random MUI Radio Buttons (does nothing)</FormLabel>
+        <Controller
+          name="randomButton"
+          control={control}
+          rules={{ required: true }}
+          render={({ field: { onChange, value } }) => (
+            <RadioGroup row value={value} onChange={onChange}>
+              {STEP_SETTINGS["PARAMETERS"].randomButtons.map((randomButton) => (
+                <FormControlLabel
+                  key={randomButton.value}
+                  value={randomButton.value}
+                  control={<Radio />}
+                  label={randomButton.label}
                 />
               ))}
             </RadioGroup>
