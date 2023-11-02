@@ -18,6 +18,7 @@ import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { URLs } from "../../constants";
 import DSGTLogo from "/public/images/logos/dlp_branding/dlp-logo.png";
+import Beginner from "@/pages/beginner";
 
 const NavbarMain = () => {
   const user = useAppSelector((state) => state.currentUser.user);
@@ -125,6 +126,11 @@ const NavbarMain = () => {
               <Grid item>
                 <Link href={URLs.donate} passHref className="nav-link">
                   Donate
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link href="/beginner" passHref className="nav-link">
+                  Beginner
                 </Link>
               </Grid>
               {isSignedIn(user) ? (
