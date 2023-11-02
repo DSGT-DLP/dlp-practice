@@ -101,10 +101,10 @@ const TrainspaceStepInner = ({
   if (isButtonClicked) {
     trainbuttontext = <CircularProgress />;
   } else {
-    if (step === 0) {
-      trainbuttontext = "Next";
-    } else if (step === 1) {
+    if (step === 1) {
       trainbuttontext = "Beginning";
+    } else if (step < TRAINSPACE_SETTINGS.steps.length - 1) {
+      trainbuttontext = "Next";
     } else {
       trainbuttontext = "Train";
     }

@@ -61,8 +61,8 @@ const Footer = () => {
           </a>
           <a
             className="foot-element"
-            title="Link to GitHub repository"
-            data-testid="github-icon"
+            title="Link to React's main page"
+            data-testid="react-icon"
             href={URLs.react}
           >
             <FontAwesomeIcon icon={faReact} size="2x" style={{color: "black"}}></FontAwesomeIcon>
