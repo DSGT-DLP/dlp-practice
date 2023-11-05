@@ -1,0 +1,16 @@
+get:
+  summary: Endpoint for the Beginner Project
+  description: A simple endpoint to return text for the beginner project
+  tags:
+    - test
+  responses:
+    200:
+      description: Beginner project endpoint
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+                example: "The button works!"

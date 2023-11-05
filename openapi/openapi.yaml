@@ -39,6 +39,8 @@ paths:
     $ref: paths/s3/getUserDatasetFileUploadPresignedPostObj.yaml
   /api/test:
     $ref: paths/test/none.yaml
+  /api/beginner:
+    $ref: paths/beginner/none.yaml
   /api/trainspace/create-trainspace:
     $ref: paths/trainspace/create-trainspace.yaml
   /api/trainspace/getTrainspaceData:

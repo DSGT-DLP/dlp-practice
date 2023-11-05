@@ -4,7 +4,7 @@ const beginnerApi = backendApi.injectEndpoints({
   endpoints: (builder) => ({
     getBeginnerMessage: builder.query<string, void>({
       query: () => ({
-        url: "/api/beginner",
+        url: "/api/training/beginner",
         method: "GET",
       }),
     }),

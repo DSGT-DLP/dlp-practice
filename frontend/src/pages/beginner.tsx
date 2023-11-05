@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import NavbarMain from "@/common/components/NavBarMain";
 import Footer from "@/common/components/Footer";
 import { Box, Button, Text } from "gestalt";
-import { useGetBeginnerMessageQuery } from "@/features/Beginner/beginnerApi";
+import { useGetBeginnerMessageQuery } from "@/features/Beginner/redux/beginnerApi";
 
 const Beginner = () => {
     const { data, isLoading, refetch } = useGetBeginnerMessageQuery();
@@ -28,14 +28,10 @@ const Beginner = () => {
         width="100%"
         >
             <Button size="lg" text="Message the Server" onClick={updateAndDisplay}/>
-
-        </Box>
-        <Box
-            display={isVisible ? "block" : "none"}
-        >
             <Text>
-                    {data}
+                {(data && isVisible) ? data.data : ""}
             </Text>
+
         </Box>
         </div>
         <Footer />
