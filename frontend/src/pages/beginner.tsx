@@ -20,11 +20,8 @@ const Beginner = () => {
         <NavbarMain />
         <div className="flex-wrapper">
         <Box
-        alignItems="center"
-        alignSelf="center"
-        margin="auto"
+        marginTop={1}
         height="100%"
-        justifyContent="center"
         width="100%"
         >
             <Button size="lg" text="Message the Server" onClick={updateAndDisplay}/>
