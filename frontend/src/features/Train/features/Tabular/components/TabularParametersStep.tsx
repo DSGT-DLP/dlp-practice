@@ -282,7 +282,6 @@ const TabularParametersStep = ({
       {renderStepperButtons((trainspaceData) => {
         setValue("layers", layers);
         handleSubmit((data) => {
-          console.log(trainspaceData.trainspaceId);
           dispatch(
             updateTabularTrainspaceData({
               current: {
