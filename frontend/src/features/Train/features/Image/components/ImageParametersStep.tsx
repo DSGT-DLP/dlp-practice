@@ -65,7 +65,7 @@ const HtmlTooltip = styled(
     <Tooltip title={title} {...props} classes={{ popper: className }}>
       {children}
     </Tooltip>
-  )
+  ),
 )(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: "rgba(255, 255, 255, 0.95)",
@@ -81,13 +81,13 @@ const ImageParametersStep = ({
   setIsModified,
 }: {
   renderStepperButtons: (
-    submitTrainspace: (data: TrainspaceData<"PARAMETERS">) => void
+    submitTrainspace: (data: TrainspaceData<"PARAMETERS">) => void,
   ) => React.ReactNode;
   setIsModified: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const trainspace = useAppSelector(
     (state) =>
-      state.trainspace.current as TrainspaceData<"PARAMETERS"> | undefined
+      state.trainspace.current as TrainspaceData<"PARAMETERS"> | undefined,
   );
   const dispatch = useAppDispatch();
   const {
@@ -228,7 +228,7 @@ const ImageParametersStep = ({
                 reviewData: undefined,
               },
               stepLabel: "PARAMETERS",
-            })
+            }),
           );
         })();
       })}
@@ -252,7 +252,7 @@ const TrainTransformsDnd = ({
       STEP_SETTINGS.PARAMETERS.transformValues.map((transformValue) => [
         transformValue,
         Math.floor(Math.random() * Date.now()),
-      ])
+      ]),
     );
   const [transformInvIds, setTransformInvIds] = useState<{
     [transformValue: string]: number;
@@ -269,7 +269,7 @@ const TrainTransformsDnd = ({
         id: transformInvIds[value],
         value: value,
         parameters: STEP_SETTINGS.PARAMETERS.transforms[value].parameters.map(
-          () => ""
+          () => "",
         ) as ""[],
       };
     } else if (dndActive.data.current && "sortable" in dndActive.data.current) {
@@ -278,7 +278,7 @@ const TrainTransformsDnd = ({
   }, [dndActive]);
   const sensors = useSensors(
     useCustomPointerSensor(),
-    useCustomKeyboardSensor({ coordinateGetter: sortableKeyboardCoordinates })
+    useCustomKeyboardSensor({ coordinateGetter: sortableKeyboardCoordinates }),
   );
   return (
     <DndContext
@@ -315,7 +315,7 @@ const TrainTransformsDnd = ({
           ) {
             move(
               fields.findIndex((field) => field.id === active.id),
-              fields.findIndex((field) => field.id === over.id)
+              fields.findIndex((field) => field.id === over.id),
             );
           }
         }
@@ -526,7 +526,7 @@ const TrainTransformComponent = ({
                       />
                     )}
                   </div>
-                )
+                ),
               )}
             </Stack>
             <div data-no-dnd>
@@ -590,7 +590,7 @@ const TestTransformsDnd = ({
       STEP_SETTINGS.PARAMETERS.transformValues.map((transformValue) => [
         transformValue,
         Math.floor(Math.random() * Date.now()),
-      ])
+      ]),
     );
   const [transformInvIds, setTransformInvIds] = useState<{
     [transformValue: string]: number;
@@ -607,7 +607,7 @@ const TestTransformsDnd = ({
         id: transformInvIds[value],
         value: value,
         parameters: STEP_SETTINGS.PARAMETERS.transforms[value].parameters.map(
-          () => ""
+          () => "",
         ) as ""[],
       };
     } else if (dndActive.data.current && "sortable" in dndActive.data.current) {
@@ -616,7 +616,7 @@ const TestTransformsDnd = ({
   }, [dndActive]);
   const sensors = useSensors(
     useCustomPointerSensor(),
-    useCustomKeyboardSensor({ coordinateGetter: sortableKeyboardCoordinates })
+    useCustomKeyboardSensor({ coordinateGetter: sortableKeyboardCoordinates }),
   );
   return (
     <DndContext
@@ -653,7 +653,7 @@ const TestTransformsDnd = ({
           ) {
             move(
               fields.findIndex((field) => field.id === active.id),
-              fields.findIndex((field) => field.id === over.id)
+              fields.findIndex((field) => field.id === over.id),
             );
           }
         }
@@ -863,7 +863,7 @@ const TestTransformComponent = ({
                       />
                     )}
                   </div>
-                )
+                ),
               )}
             </Stack>
             <div data-no-dnd>

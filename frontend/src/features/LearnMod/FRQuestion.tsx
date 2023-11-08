@@ -33,7 +33,7 @@ const FRQuestion = (props: FRQuestionProps) => {
       setAnsweredIncorrect(false);
     } else {
       const answer = parseInt(
-        (document.getElementById("frInput") as HTMLInputElement).value
+        (document.getElementById("frInput") as HTMLInputElement).value,
       );
 
       if (answer === props.questionObject.answer) {

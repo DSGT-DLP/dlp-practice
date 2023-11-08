@@ -268,7 +268,7 @@ const TrainSpace = () => {
                               : "black",
                         },
                         showarrow: false,
-                      }))
+                      })),
                     )
                     .flat(),
                   paper_bgcolor: "rgba(0,0,0,0)",

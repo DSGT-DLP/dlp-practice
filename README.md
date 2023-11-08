@@ -93,6 +93,7 @@ Run the following commands in the project directory (the root folder created aft
 Make sure to run the above two commands in separate terminals.
 
 ## AWS Setup
+
 If you will be working on tasks that interface with AWS resources/services, please follow the below steps (please install AWS CLI using this [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) first):
 
 1. Request an AWS Account for Deep Learning Playground by messaging Faris, Karthik, or Daniel in the DLP Discord. Please include your Github username along with your personal email account
@@ -107,12 +108,12 @@ If you will be working on tasks that interface with AWS resources/services, plea
    sso_registration_scopes = sso:account:access
    default output format = None
    cli profile name = just press enter (use the default one provided)
-   ````
+   ```
    1. Make sure you follow the instructions in the terminal to ensure your credentials are set correctly (eg: allow botocore to access data should be selected as "yes")
    1. Run `cat ~/.aws/config` to look for the sso profile configured.
    1. Run `export AWS_PROFILE=<sso_profile_name from step 6>`
 
-Please message in the DLP Discord if you have any difficulty/issue with these steps. 
+Please message in the DLP Discord if you have any difficulty/issue with these steps.
 
 # Architecture
 

@@ -46,7 +46,7 @@ const DlpTooltip = (props: DlpTooltipProps) => {
       <Tooltip title={title} {...props} classes={{ popper: className }}>
         {children}
       </Tooltip>
-    )
+    ),
   )(({ theme }) => ({
     [`& .${tooltipClasses.tooltip}`]: {
       backgroundColor: "rgba(255, 255, 255, 0.95)",

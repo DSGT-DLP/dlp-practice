@@ -95,7 +95,7 @@ export const UploadDatasetPanel = ({
               if (e.target.files && e.target.files[0]) {
                 if (e.target.files[0].type.match(acceptedTypes) == null) {
                   toast.error(
-                    "Files can only be of type " + acceptedTypes + "."
+                    "Files can only be of type " + acceptedTypes + ".",
                   );
                   return;
                 } else {

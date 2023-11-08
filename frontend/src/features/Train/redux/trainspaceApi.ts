@@ -59,7 +59,7 @@ const trainspaceApi = backendApi
               body: file,
             },
             _,
-            __
+            __,
           );
 
           if (response.error) {

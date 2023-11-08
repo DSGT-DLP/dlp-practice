@@ -72,7 +72,7 @@ const SettingsBlock = () => {
               if (fullName) {
                 try {
                   await dispatch(
-                    updateUserDisplayName({ displayName: fullName })
+                    updateUserDisplayName({ displayName: fullName }),
                   ).unwrap();
                   toast.success("Successfully updated display name", {
                     position: toast.POSITION.TOP_CENTER,
@@ -82,7 +82,7 @@ const SettingsBlock = () => {
                     `Display name - ${(e as SerializedError).message}`,
                     {
                       position: toast.POSITION.TOP_CENTER,
-                    }
+                    },
                   );
                 }
               }
@@ -108,7 +108,7 @@ const SettingsBlock = () => {
                     updateUserPassword({
                       password,
                       checkPassword,
-                    })
+                    }),
                   ).unwrap();
                   toast.success("Successfully updated password", {
                     position: toast.POSITION.TOP_CENTER,

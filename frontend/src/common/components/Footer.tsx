@@ -11,7 +11,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontSize: 40,
-          color: COLORS.dark_blue
+          color: COLORS.dark_blue,
         },
       },
     },
@@ -64,7 +64,7 @@ const Footer = () => {
             data-testid="react-icon"
             title="Pretty React Icon"
           >
-            <FontAwesomeIcon icon={faReact} size="2x"/>
+            <FontAwesomeIcon icon={faReact} size="2x" />
           </a>
         </div>
       </ThemeProvider>

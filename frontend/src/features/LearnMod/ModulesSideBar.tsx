@@ -47,7 +47,7 @@ const ModulesSideBar = () => {
                               pathname: "/LearnContent",
                               query: sectionSpec,
                             },
-                            "/LearnContent"
+                            "/LearnContent",
                           )
                         }
                         key={index2}

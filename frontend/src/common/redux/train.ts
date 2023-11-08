@@ -29,13 +29,13 @@ export const trainSlice = createSlice({
       const csvToJson = (dataString: string) => {
         const dataStringLines = dataString.split(/\r\n|\n/);
         const headers = dataStringLines[0].split(
-          /,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/
+          /,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/,
         );
 
         const list = [];
         for (let i = 1; i < dataStringLines.length; i++) {
           const row = dataStringLines[i].split(
-            /,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/
+            /,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/,
           );
           if (headers && row.length === headers.length) {
             const obj: { [x: string]: unknown } = {};

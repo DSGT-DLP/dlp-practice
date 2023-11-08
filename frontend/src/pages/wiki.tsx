@@ -18,7 +18,7 @@ const DEMO_VIDEO_PATH = "/images/demo_video.gif";
 
 const displayChange = (
   display: DisplayValue,
-  setdisplay: React.Dispatch<React.SetStateAction<DisplayValue>>
+  setdisplay: React.Dispatch<React.SetStateAction<DisplayValue>>,
 ) => {
   if (display === "block") {
     setdisplay("none");
@@ -51,7 +51,7 @@ const render_layer_info = (layer_info: WikiLayerItem) => {
           onClick={() =>
             displayChange(
               layer_info.docs[i].displayState,
-              layer_info.docs[i].setDisplayState
+              layer_info.docs[i].setDisplayState,
             )
           }
           className="layer-info-button"
@@ -65,7 +65,7 @@ const render_layer_info = (layer_info: WikiLayerItem) => {
         >
           {layer_info.docs[i].body}
         </div>
-      </li>
+      </li>,
     );
   }
   return (
@@ -97,7 +97,7 @@ const render_all_layer_info = (layer_wiki: WikiLayerItem[]) => {
         key={layer_element.id}
       >
         <li key={layer_element.title}>{render_layer_info(layer_element)}</li>
-      </ul>
+      </ul>,
     );
   }
   return body;

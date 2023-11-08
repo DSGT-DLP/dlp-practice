@@ -204,7 +204,7 @@ const Login = () => {
                     password: password,
                     displayName: fullName,
                     recaptcha: recaptcha,
-                  })
+                  }),
                 ).unwrap();
                 toast.success(`Welcome ${fullName}`, {
                   position: toast.POSITION.TOP_CENTER,
@@ -219,7 +219,7 @@ const Login = () => {
               setIsLoading(true);
               try {
                 await dispatch(
-                  signInViaEmailAndPassword({ email, password })
+                  signInViaEmailAndPassword({ email, password }),
                 ).unwrap();
               } catch (e) {
                 toast.error((e as SerializedError).message, {

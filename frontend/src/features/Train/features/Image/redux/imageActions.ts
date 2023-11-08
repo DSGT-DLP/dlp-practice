@@ -3,7 +3,7 @@ import { TrainspaceData } from "../types/imageTypes";
 import { TRAINSPACE_SETTINGS } from "../constants/imageConstants";
 
 export const updateImageTrainspaceData = <
-  T extends (typeof TRAINSPACE_SETTINGS)["steps"][number]
+  T extends (typeof TRAINSPACE_SETTINGS)["steps"][number],
 >({
   current,
   stepLabel,

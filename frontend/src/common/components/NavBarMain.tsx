@@ -123,7 +123,11 @@ const NavbarMain = () => {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="https://www.youtube.com/watch?v=QrR_gm6RqCo" passHref className="nav-link">
+                <Link
+                  href="https://www.youtube.com/watch?v=QrR_gm6RqCo"
+                  passHref
+                  className="nav-link"
+                >
                   Donate
                 </Link>
               </Grid>

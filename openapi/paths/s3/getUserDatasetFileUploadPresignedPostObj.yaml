@@ -40,12 +40,22 @@ post:
                 example: "Presigned URL fetch successful"
               presigned_post_obj:
                 type: string
-                example: "{'url': 'https://cloudberry-examples.s3.amazonaws.com/', 
-                'fields': {
-                  'key': 'uploads/image.jpg', 
-                  'AWSAccessKeyId': 'AKIALGKOKBY37F5FZF4I', 
-                  'policy': 'eyJleHBpcmF0aW9uIjogIjIwMTgtMDctMTNUMDI6Mzg6MTBaIiwgImNvbmRpdGlvbnMiOiBbWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsIDEsIDEwNDg1NzldLCB7ImJ1Y2tldCI6ICJjbG91ZGJlcnJ5LWV4YW1wbGVzIn0sIHsia2V5IjogInVwbG9hZHMvaW1hZ2UuanBnIn1dfQ==', 
-                  'signature': 'ZY7Orehfdzg+ToJJXhYuV/XyK5o='}}"
+                example: >
+                  {
+                    'url': 'https://cloudberry-examples.s3.amazonaws.com/',
+                    'fields': {
+                      'key': 'uploads/image.jpg',
+                      'AWSAccessKeyId': 'AKIALGKOKBY37F5FZF4I',
+                      'policy': 'eyJleHBpcmF0aW9uIjogIjIwMTgtMDctMTNUMDI6Mzg6MTBaIiwgImNvbmRpdGlvbnMiOiBbWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsIDEsIDEwNDg1NzldLCB7ImJ1Y2tldCI6ICJjbG91ZGJlcnJ5LWV4YW1wbGVzIn0sIHsia2V5IjogInVwbG9hZHMvaW1hZ2UuanBnIn1dfQ==',
+                      'signature': 'ZY7Orehfdzg+ToJJXhYuV/XyK5o='
+                    }
+                  }
+                # example: "{'url': 'https://cloudberry-examples.s3.amazonaws.com/',
+                # 'fields': {
+                #   'key': 'uploads/image.jpg',
+                #   'AWSAccessKeyId': 'AKIALGKOKBY37F5FZF4I',
+                #   'policy': 'eyJleHBpcmF0aW9uIjogIjIwMTgtMDctMTNUMDI6Mzg6MTBaIiwgImNvbmRpdGlvbnMiOiBbWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsIDEsIDEwNDg1NzldLCB7ImJ1Y2tldCI6ICJjbG91ZGJlcnJ5LWV4YW1wbGVzIn0sIHsia2V5IjogInVwbG9hZHMvaW1hZ2UuanBnIn1dfQ==',
+                #   'signature': 'ZY7Orehfdzg+ToJJXhYuV/XyK5o='}}"
 
     "400":
       description: Presigned URL fetch didn't go through successfully. This is usually something wrong with your code

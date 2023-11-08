@@ -112,7 +112,7 @@ export default function TabularFlow(props: TabularFlowProps) {
 
         node.data.parameters[args.parameterIndex] = args.newValue;
         return node;
-      })
+      }),
     );
   }
 

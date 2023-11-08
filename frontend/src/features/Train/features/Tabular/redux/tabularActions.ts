@@ -3,7 +3,7 @@ import { TrainspaceData } from "../types/tabularTypes";
 import { TRAINSPACE_SETTINGS } from "../constants/tabularConstants";
 
 export const updateTabularTrainspaceData = <
-  T extends (typeof TRAINSPACE_SETTINGS)["steps"][number]
+  T extends (typeof TRAINSPACE_SETTINGS)["steps"][number],
 >({
   current,
   stepLabel,

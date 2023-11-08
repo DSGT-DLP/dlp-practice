@@ -36,7 +36,7 @@ const MCQuestion = (props: MCQuestionProps) => {
   const questionSubmit = () => {
     if (
       document.querySelector(
-        'input[name="' + props.questionObject.questionID + '"]:checked'
+        'input[name="' + props.questionObject.questionID + '"]:checked',
       ) == null
     ) {
       setUnanswered(true);
@@ -46,9 +46,9 @@ const MCQuestion = (props: MCQuestionProps) => {
       const answer = parseInt(
         (
           document.querySelector(
-            'input[name="' + props.questionObject.questionID + '"]:checked'
+            'input[name="' + props.questionObject.questionID + '"]:checked',
           ) as HTMLInputElement
-        ).value
+        ).value,
       );
 
       if (answer === props.questionObject.correctAnswer) {

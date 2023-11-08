@@ -33,14 +33,14 @@ const TabularParametersStep = ({
   setStep,
 }: {
   renderStepperButtons: (
-    submitTrainspace: (data: TrainspaceData<"PARAMETERS">) => void
+    submitTrainspace: (data: TrainspaceData<"PARAMETERS">) => void,
   ) => React.ReactNode;
   setIsModified: React.Dispatch<React.SetStateAction<boolean>>;
   setStep: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const trainspace = useAppSelector(
     (state) =>
-      state.trainspace.current as TrainspaceData<"PARAMETERS"> | undefined
+      state.trainspace.current as TrainspaceData<"PARAMETERS"> | undefined,
   );
   const dispatch = useAppDispatch();
   const [getColumns, { data, error }] = useLazyGetColumnsFromDatasetQuery();
@@ -290,7 +290,7 @@ const TabularParametersStep = ({
                 reviewData: undefined,
               },
               stepLabel: "PARAMETERS",
-            })
+            }),
           );
         })();
       })}

@@ -10,7 +10,7 @@ import {
 export interface TrainspaceData<
   T extends (typeof TRAINSPACE_SETTINGS)["steps"][number] | "TRAIN" =
     | (typeof TRAINSPACE_SETTINGS)["steps"][number]
-    | "TRAIN"
+    | "TRAIN",
 > extends BaseTrainspaceData {
   dataSource: "TABULAR";
   datasetData: T extends "PARAMETERS" | "REVIEW" | "TRAIN"

@@ -9,12 +9,12 @@ const ImageReviewStep = ({
   setIsModified,
 }: {
   renderStepperButtons: (
-    submitTrainspace: (data: TrainspaceData<"REVIEW">) => void
+    submitTrainspace: (data: TrainspaceData<"REVIEW">) => void,
   ) => React.ReactNode;
   setIsModified: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const trainspace = useAppSelector(
-    (state) => state.trainspace.current as TrainspaceData<"REVIEW"> | undefined
+    (state) => state.trainspace.current as TrainspaceData<"REVIEW"> | undefined,
   );
   const dispatch = useAppDispatch();
   if (!trainspace) return <></>;
@@ -35,7 +35,7 @@ const ImageReviewStep = ({
               reviewData: {},
             },
             stepLabel: "REVIEW",
-          })
+          }),
         );
       })}
     </Stack>

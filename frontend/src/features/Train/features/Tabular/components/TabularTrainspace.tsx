@@ -22,7 +22,7 @@ import { removeTrainspaceData } from "@/features/Train/redux/trainspaceSlice";
 
 const TabularTrainspace = () => {
   const trainspace = useAppSelector(
-    (state) => state.trainspace.current as TrainspaceData | undefined
+    (state) => state.trainspace.current as TrainspaceData | undefined,
   );
   const {
     handleSubmit,
@@ -52,7 +52,7 @@ const TabularTrainspace = () => {
         <Stepper
           activeStep={Math.min(
             trainspace.step,
-            TRAINSPACE_SETTINGS.steps.length - 1
+            TRAINSPACE_SETTINGS.steps.length - 1,
           )}
         >
           {TRAINSPACE_SETTINGS.steps.map((step, index) => (
@@ -115,14 +115,14 @@ const TrainspaceStepInner = ({
       train(trainspace)
         .unwrap()
         .then(({ trainspaceId }) => {
-          console.log('User UID (trainspaceId):', trainspaceId);
+          console.log("User UID (trainspaceId):", trainspaceId);
           router.push({ pathname: `/train/${trainspaceId}` }).then(() => {
             dispatch(removeTrainspaceData());
           });
         });
     }
   }, [trainspace]);
-  
+
   if (!Component) return null;
   return (
     <Component

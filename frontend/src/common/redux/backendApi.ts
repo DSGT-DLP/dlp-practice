@@ -14,7 +14,7 @@ const customFetchBaseQuery =
     prepareHeaders,
   }: {
     prepareHeaders?: (
-      headers: Headers
+      headers: Headers,
     ) => MaybePromise<void | Headers> | undefined;
   }): BaseQueryFn<FetchArgs, unknown, FetchBaseQueryError> =>
   async (args, api, extraOptions) => {

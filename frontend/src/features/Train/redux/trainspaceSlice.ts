@@ -11,7 +11,7 @@ export const trainspaceSlice = createSlice({
   reducers: {
     createTrainspaceData: (
       state,
-      { payload }: PayloadAction<{ current: BaseTrainspaceData }>
+      { payload }: PayloadAction<{ current: BaseTrainspaceData }>,
     ) => {
       state.current = { ...payload.current, ...{ step: 0 } };
     },
@@ -27,7 +27,7 @@ export const trainspaceSlice = createSlice({
 });
 
 export const updateTrainspaceData = createAction<BaseTrainspaceData>(
-  "trainspace/setTrainspaceData"
+  "trainspace/setTrainspaceData",
 );
 
 export const { createTrainspaceData, removeTrainspaceData } =

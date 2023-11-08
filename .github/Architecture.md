@@ -220,4 +220,3 @@
 |  |- 📜 next.config.js
 |  |- 📜 jest.config.js
 ```
-

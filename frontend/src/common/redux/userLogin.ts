@@ -35,7 +35,7 @@ export interface UserType {
   emailVerified: boolean;
 }
 export const isSignedIn = (
-  user: UserType | "pending" | undefined
+  user: UserType | "pending" | undefined,
 ): user is UserType => user !== undefined && user !== "pending";
 
 interface UserProgressDataType {
@@ -96,7 +96,7 @@ export const updateUserPassword = createAsyncThunk<
     return thunkAPI.rejectWithValue({
       message: "Update password failed",
     });
-  }
+  },
 );
 
 export const updateUserEmail = createAsyncThunk<
@@ -154,7 +154,7 @@ export const updateUserDisplayName = createAsyncThunk<
       .dispatch(
         updateUserProfile({
           displayName,
-        })
+        }),
       )
       .unwrap();
   } catch (e) {
@@ -201,7 +201,7 @@ export const updateUserProfile = createAsyncThunk<
     return thunkAPI.rejectWithValue({
       message: "Updating the user profile failed",
     });
-  }
+  },
 );
 
 export const registerViaEmailAndPassword = createAsyncThunk<
@@ -240,7 +240,7 @@ export const registerViaEmailAndPassword = createAsyncThunk<
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       const user = userCredential.user;
       if (displayName) {
@@ -260,7 +260,7 @@ export const registerViaEmailAndPassword = createAsyncThunk<
     return thunkAPI.rejectWithValue({
       message: "Registration with email and password failed",
     });
-  }
+  },
 );
 
 export const signInViaEmailAndPassword = createAsyncThunk<
@@ -282,7 +282,7 @@ export const signInViaEmailAndPassword = createAsyncThunk<
     return thunkAPI.rejectWithValue({
       message: "Sign in with email and password failed",
     });
-  }
+  },
 );
 
 export const signInViaGoogleRedirect = createAsyncThunk<
@@ -339,7 +339,7 @@ export const signOutUser = createAsyncThunk<void, void, ThunkApiType>(
       }
       return thunkAPI.rejectWithValue({ message: "Sign out failed" });
     }
-  }
+  },
 );
 
 export const fetchUserProgressData = createAsyncThunk<
@@ -362,7 +362,7 @@ export const currentUserSlice = createSlice({
   reducers: {
     setCurrentUser: (
       state,
-      { payload }: PayloadAction<UserType | "pending" | undefined>
+      { payload }: PayloadAction<UserType | "pending" | undefined>,
     ) => {
       if (!payload) {
         state.user = undefined;
@@ -391,7 +391,7 @@ export const currentUserSlice = createSlice({
       (state, { payload }) => {
         storage.setItem("expect-user", "true");
         state.user = payload;
-      }
+      },
     );
     builder.addCase(registerViaEmailAndPassword.rejected, (state) => {
       state.user = undefined;

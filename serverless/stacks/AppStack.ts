@@ -7,7 +7,7 @@ export function AppStack({ stack }: StackContext) {
       bucket: s3Bucket.fromBucketArn(
         stack,
         "i-dlp-upload-bucket",
-        "arn:aws:s3:::dlp-upload-bucket"
+        "arn:aws:s3:::dlp-upload-bucket",
       ),
     },
   });
@@ -21,14 +21,14 @@ export function AppStack({ stack }: StackContext) {
       modelPtUri: "string",
       onnxUri: "string",
       confusionMatrixUri: "string",
-      aucRocUri: "string"
+      aucRocUri: "string",
     },
     primaryIndex: {
       partitionKey: "runId",
     },
     globalIndexes: {
-      "TrainspaceIndex": { partitionKey: "trainspaceId", sortKey: "timestamp"},
-      "UserIndex": {partitionKey: "userId"}
+      TrainspaceIndex: { partitionKey: "trainspaceId", sortKey: "timestamp" },
+      UserIndex: { partitionKey: "userId" },
     },
   });
   const api = new Api(stack, "Api", {
@@ -63,7 +63,7 @@ export function AppStack({ stack }: StackContext) {
     ApiEndpoint: api.url,
     GetUserDatasetPresignedUploadUrlFunctionName:
       api.getFunction(
-        "GET /datasets/user/{type}/{filename}/presigned_upload_url"
+        "GET /datasets/user/{type}/{filename}/presigned_upload_url",
       )?.functionName ?? "",
     GetUserDatasetsFunctionName:
       api.getFunction("GET /datasets/user/{type}")?.functionName ?? "",
@@ -71,7 +71,7 @@ export function AppStack({ stack }: StackContext) {
       api.getFunction("GET /datasets/user/{type}/{filename}/columns")
         ?.functionName ?? "",
     TrainspaceRunTableName: {
-      value: trainspaceRunTable.tableName
-    }
+      value: trainspaceRunTable.tableName,
+    },
   });
 }

@@ -20,7 +20,7 @@ ChartJS.register(
   LinearScale,
   BarElement,
   Title,
-  TimeSeriesScale
+  TimeSeriesScale,
 );
 const TrainBarChart = ({
   trainSpaceDataArr,
@@ -50,7 +50,7 @@ const TrainBarChart = ({
           execFrequencyData.length !== 0 &&
           sameDay(
             row.created,
-            execFrequencyData[execFrequencyData.length - 1].x
+            execFrequencyData[execFrequencyData.length - 1].x,
           )
             ? (execFrequencyData[execFrequencyData.length - 1].y += 1)
             : execFrequencyData.push({
@@ -113,7 +113,7 @@ const TrainBarChart = ({
                       execFrequencyBarData.datasets[0].data[
                         context[0].dataIndex
                       ].x,
-                      "MMM d"
+                      "MMM d",
                     );
                   },
                 },

@@ -14,12 +14,12 @@ const TabularReviewStep = ({
   setIsModified,
 }: {
   renderStepperButtons: (
-    submitTrainspace: (data: TrainspaceData<"REVIEW">) => void
+    submitTrainspace: (data: TrainspaceData<"REVIEW">) => void,
   ) => React.ReactNode;
   setIsModified: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const trainspace = useAppSelector(
-    (state) => state.trainspace.current as TrainspaceData<"REVIEW"> | undefined
+    (state) => state.trainspace.current as TrainspaceData<"REVIEW"> | undefined,
   );
   const {
     handleSubmit,
@@ -41,7 +41,7 @@ const TabularReviewStep = ({
         control={control}
         name="notificationPhoneNumber"
         rules={{
-          // ref: https://stackoverflow.com/a/16699507/11031425 
+          // ref: https://stackoverflow.com/a/16699507/11031425
           pattern: /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
         }}
         render={({ field: { onChange } }) => (
@@ -81,7 +81,7 @@ const TabularReviewStep = ({
                 reviewData: data,
               },
               stepLabel: "REVIEW",
-            })
+            }),
           );
         })();
       })}

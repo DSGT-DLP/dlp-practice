@@ -15,17 +15,17 @@ const TabularDatasetStep = ({
   setIsModified,
 }: {
   renderStepperButtons: (
-    submitTrainspace: (data: TrainspaceData<"DATASET">) => void
+    submitTrainspace: (data: TrainspaceData<"DATASET">) => void,
   ) => React.ReactNode;
   setIsModified: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const trainspace = useAppSelector(
-    (state) => state.trainspace.current as TrainspaceData | undefined
+    (state) => state.trainspace.current as TrainspaceData | undefined,
   );
   const [currTab, setCurrTab] = React.useState(
     trainspace?.datasetData?.isDefaultDataset === true
       ? "default-dataset"
-      : "upload-dataset"
+      : "upload-dataset",
   );
   const defaultDatasetMethods = useForm<DatasetData>({
     defaultValues:
@@ -43,7 +43,7 @@ const TabularDatasetStep = ({
   useEffect(() => {
     setIsModified(
       defaultDatasetMethods.formState.isDirty ||
-        uploadDatasetMethods.formState.isDirty
+        uploadDatasetMethods.formState.isDirty,
     );
   }, [
     defaultDatasetMethods.formState.isDirty,
@@ -82,7 +82,7 @@ const TabularDatasetStep = ({
                   reviewData: undefined,
                 },
                 stepLabel: "DATASET",
-              })
+              }),
             );
           })();
         } else {
@@ -96,7 +96,7 @@ const TabularDatasetStep = ({
                   reviewData: undefined,
                 },
                 stepLabel: "DATASET",
-              })
+              }),
             );
           })();
         }

@@ -112,7 +112,7 @@ export default function ImageFlow(props: ImageFlowProps) {
 
         node.data.parameters[args.parameterIndex] = args.newValue;
         return node;
-      })
+      }),
     );
   }
 

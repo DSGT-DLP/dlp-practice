@@ -22,7 +22,7 @@ const FirebaseAuthState = () => {
             uid: firebaseUser.uid,
             displayName: firebaseUser.displayName,
             emailVerified: firebaseUser.emailVerified,
-          })
+          }),
         );
       } else if (firebaseUser == null) {
         dispatch(setCurrentUser(undefined));

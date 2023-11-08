@@ -15,11 +15,11 @@ jobs:
           script: |
             const issueNumber = context.issue.number;
             const labels = context.payload.issue.labels.map(label => label.name);
-            
+
             const isBugRequest = labels.includes('bug');
             const isFeatureRequest = labels.includes('enhancement');
             const defaultBranch = "nextjs"
-            
+
             if (isBugRequest) {
               const branchName = `bug-${issueNumber}`;
               

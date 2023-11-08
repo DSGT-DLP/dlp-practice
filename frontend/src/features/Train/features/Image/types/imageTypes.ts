@@ -1,16 +1,16 @@
 import {
-    BaseTrainspaceData,
-    DatasetData,
+  BaseTrainspaceData,
+  DatasetData,
 } from "@/features/Train/types/trainTypes";
 import {
-    STEP_SETTINGS,
-    TRAINSPACE_SETTINGS,
+  STEP_SETTINGS,
+  TRAINSPACE_SETTINGS,
 } from "@/features/Train/features/Image/constants/imageConstants";
 
 export interface TrainspaceData<
   T extends (typeof TRAINSPACE_SETTINGS)["steps"][number] | "TRAIN" =
     | (typeof TRAINSPACE_SETTINGS)["steps"][number]
-    | "TRAIN"
+    | "TRAIN",
 > extends BaseTrainspaceData {
   dataSource: "IMAGE";
   datasetData: T extends "PARAMETERS" | "REVIEW" | "TRAIN"

@@ -15,10 +15,10 @@ import Footer from "@/common/components/Footer";
 
 const LearnContent = () => {
   const [moduleContent, setModuleContent] = useState<ModuleType>(
-    JSON.parse(Router.query.moduleContent) as ModuleType
+    JSON.parse(Router.query.moduleContent) as ModuleType,
   );
   const [subSection, setSubSection] = useState(
-    parseInt(Router.query.subsection)
+    parseInt(Router.query.subsection),
   );
   const user = useAppSelector((state) => state.currentUser.user);
   useEffect(() => {
@@ -117,7 +117,7 @@ const LearnContent = () => {
               if (contentComponent.sectionType === "exercise") {
                 return <Exercise key={index} />;
               }
-            }
+            },
           )}
         </div>
       </div>

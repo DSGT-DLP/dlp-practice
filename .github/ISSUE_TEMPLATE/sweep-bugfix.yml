@@ -1,5 +1,5 @@
-name: '🤖 Sweep: Bugfix'
-title: 'Sweep: '
+name: "🤖 Sweep: Bugfix"
+title: "Sweep: "
 description: Sweep-automated bugfix request
 labels: ["sweep"]
 body:

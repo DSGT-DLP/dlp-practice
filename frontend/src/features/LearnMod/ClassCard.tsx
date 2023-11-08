@@ -104,7 +104,7 @@ const ClassCard = (props: {
                 pathname: "/LearnContent",
                 query: sectionSpec,
               },
-              "/LearnContent"
+              "/LearnContent",
             )
           }
           style={completed ? { border: "3px solid green" } : {}}

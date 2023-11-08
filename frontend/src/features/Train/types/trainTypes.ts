@@ -1,6 +1,6 @@
 import { DATA_SOURCE_ARR } from "../constants/trainConstants";
 
-export type DATA_SOURCE = typeof DATA_SOURCE_ARR[number];
+export type DATA_SOURCE = (typeof DATA_SOURCE_ARR)[number];
 
 export type TRAIN_STATUS =
   | "QUEUED"

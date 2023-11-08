@@ -4,13 +4,13 @@ name: Prettier JS
 on:
   pull_request:
     paths:
-      - 'frontend/**'
+      - "frontend/**"
   push:
     branches:
       - frontend
       - main
     paths:
-      - 'frontend/**'
+      - "frontend/**"
 
 jobs:
   prettier:
