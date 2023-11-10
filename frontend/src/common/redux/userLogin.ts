@@ -293,7 +293,11 @@ export const signInViaGoogleRedirect = createAsyncThunk<
   try {
     const googleProvider = new GoogleAuthProvider();
     await signInWithPopup(auth, googleProvider);
-    console.log(auth.currentUser.email);
+    await auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        console.log(user.email);
+      }
+    });
     //await signInWithRedirect(auth, googleProvider);
     return;
   } catch (e) {
@@ -313,7 +317,11 @@ export const signInViaGithubRedirect = createAsyncThunk<
     const githubProvider = new GithubAuthProvider();
     storage.setItem("expect-user", "true");
     await signInWithPopup(auth, githubProvider);
-    console.log(auth.currentUser.email);
+    await auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        console.log(user.email);
+      }
+    });
     //await signInWithRedirect(auth, githubProvider);
     //TODO: Replace with signInWithRedirect: https://firebase.google.com/docs/auth/web/redirect-best-practices
     return;
