@@ -28,6 +28,7 @@ const ImageReviewStep = ({
       <Typography>{`Criterion: ${trainspace.parameterData.criterion}`}</Typography>
       <Typography>{`Optimizer: ${trainspace.parameterData.optimizerName}`}</Typography>
       {renderStepperButtons((trainspaceData) => {
+        console.log(trainspaceData.name);
         dispatch(
           updateImageTrainspaceData({
             current: {

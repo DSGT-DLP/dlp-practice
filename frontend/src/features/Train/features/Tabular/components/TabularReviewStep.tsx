@@ -73,6 +73,7 @@ const TabularReviewStep = ({
         <p style={GENERAL_STYLES.error_text}>Please enter a valid email</p>
       )}
       {renderStepperButtons((trainspaceData) => {
+        console.log(trainspaceData.name);
         handleSubmit((data) => {
           dispatch(
             updateTabularTrainspaceData({
