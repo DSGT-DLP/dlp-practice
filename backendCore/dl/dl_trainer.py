@@ -259,10 +259,6 @@ def train_deep_model(
         return train_deep_regression_model(
             model, train_loader, test_loader, optimizer, criterion, epochs
         )
-    elif problem_type.upper() == ProblemType.get_problem_obj(ProblemType.NONE):
-        return train_deep_regression_model(
-            model, train_loader, test_loader, optimizer, criterion, epochs
-        )
 
 
 def get_deep_predictions(model: nn.Module, test_loader):
