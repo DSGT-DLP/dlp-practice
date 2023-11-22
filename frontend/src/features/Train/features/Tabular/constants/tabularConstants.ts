@@ -3,6 +3,7 @@ import TabularParametersStep from "../components/TabularParametersStep";
 import TabularReviewStep from "../components/TabularReviewStep";
 import TabularTrainspace from "../components/TabularTrainspace";
 
+
 export const TRAINSPACE_SETTINGS = {
   name: "Tabular",
   steps: ["DATASET", "PARAMETERS", "REVIEW"],
@@ -29,6 +30,7 @@ export const STEP_SETTINGS = {
     problemTypes: [
       { label: "Classification", value: "CLASSIFICATION" },
       { label: "Regression", value: "REGRESSION" },
+      { label: "NOTHING", value: "NOTHING" },
     ],
     criterions: [
       {

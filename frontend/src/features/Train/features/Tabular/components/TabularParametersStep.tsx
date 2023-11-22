@@ -169,6 +169,7 @@ const TabularParametersStep = ({
           />
         </>
       )}
+      
       <FormControl>
         <FormLabel>Problem Type</FormLabel>
         <Controller

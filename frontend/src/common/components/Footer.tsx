@@ -1,7 +1,9 @@
 import React from "react";
 import { COLORS, URLs } from "../../constants";
-import { LinkedIn, YouTube, Instagram, GitHub } from "@mui/icons-material";
+import { LinkedIn, YouTube, Instagram, GitHub} from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact } from '@fortawesome/free-brands-svg-icons'
 
 const theme = createTheme({
   components: {
@@ -57,6 +59,14 @@ const Footer = () => {
           >
             <GitHub />
           </a>
+          <a
+            className="foot-element"
+            title="React logo"
+            data-testid="react-icon"
+          >
+            <FontAwesomeIcon icon={faReact} size="2x" />
+          </a>
+         
         </div>
       </ThemeProvider>
       <div
