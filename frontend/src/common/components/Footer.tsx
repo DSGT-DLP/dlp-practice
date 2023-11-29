@@ -2,6 +2,8 @@ import React from "react";
 import { COLORS, URLs } from "../../constants";
 import { LinkedIn, YouTube, Instagram, GitHub } from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 
 const theme = createTheme({
   components: {
@@ -9,7 +11,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontSize: 40,
-          color: COLORS.dark_blue
+          color: COLORS.dark_blue,
         },
       },
     },
@@ -25,6 +27,7 @@ const Footer = () => {
           id="footer-socials"
           data-testid="footer-socials"
         >
+          <FontAwesomeIcon icon={faReact} size="2x" />
           <a
             className="foot-element"
             data-testid="linkedin-icon"

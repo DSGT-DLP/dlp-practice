@@ -29,6 +29,7 @@ export interface TrainspaceResultsData extends TrainspaceData<"TRAIN"> {
 }
 
 export interface ParameterData {
+  testRadio: string;
   targetCol: string;
   features: string[];
   problemType: (typeof STEP_SETTINGS)["PARAMETERS"]["problemTypes"][number]["value"];

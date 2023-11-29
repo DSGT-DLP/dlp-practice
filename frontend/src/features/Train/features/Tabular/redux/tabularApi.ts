@@ -28,6 +28,7 @@ const tabularApi = backendApi.injectEndpoints({
         },
       }),
       transformResponse: (response: { trainspace_id: string }) => {
+        console.log("trainspace_id", response.trainspace_id);
         return {
           trainspaceId: response.trainspace_id,
         };

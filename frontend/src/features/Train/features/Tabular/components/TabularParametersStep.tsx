@@ -102,6 +102,27 @@ const TabularParametersStep = ({
         </>
       ) : (
         <>
+          <FormControl>
+            <FormLabel>Test radio group</FormLabel>
+            <Controller
+              name="testRadio"
+              control={control}
+              render={({ field: { onChange, value } }) => (
+                <RadioGroup row value={value} onChange={onChange}>
+                  <FormControlLabel
+                    value="option 1"
+                    control={<Radio />}
+                    label="Option 1"
+                  />
+                  <FormControlLabel
+                    value="option 2"
+                    control={<Radio />}
+                    label="Option 2"
+                  />
+                </RadioGroup>
+              )}
+            />
+          </FormControl>
           <Controller
             control={control}
             name="targetCol"

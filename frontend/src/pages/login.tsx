@@ -75,6 +75,7 @@ const Login = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     if (router.isReady && isSignedIn(user)) {
+      console.log(user.email);
       router.replace({ pathname: "/dashboard" });
     }
   }, [user, router.isReady]);
