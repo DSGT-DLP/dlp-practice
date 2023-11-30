@@ -5,6 +5,7 @@ class DefaultDatasetResponse(Schema):
     data: list[str]
     message: str
 
+
 class AllDatasetResponse(Schema):
-    data: dict 
+    data: dict
     message: str
