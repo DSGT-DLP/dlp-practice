@@ -3,7 +3,10 @@ from ninja import Router, Schema
 from ninja.security import HttpBearer
 from training.core.authenticator import FirebaseAuth, Request
 from training.core.dataset import SklearnDatasetCreator
-from training.routes.datasets.default.schemas import DefaultDatasetResponse
+from training.routes.datasets.default.schemas import (
+    DefaultDatasetResponse,
+    AllDatasetResponse,
+)
 from training.routes.schemas import NotFoundError
 
 router = Router()
@@ -22,4 +25,18 @@ def defaultDatasets(request: Request, name: str):
         "data": dataset.columns.tolist(),
         "message": "Success",
         "token": request.auth,
+    }
+
+
+@router.get(
+    "{name}/all",
+    response={200: AllDatasetResponse, 404: NotFoundError},
+)
+def defaultDatasets(request: Request, name: str):
+    if not name in SklearnDatasetCreator.DEFAULT_DATASETS:
+        return 404, {"message": "Dataset not found"}
+    dataset = SklearnDatasetCreator.getDefaultDataset(name)
+    return 200, {
+        "data": dataset.to_dict(),
+        "message": "Success",
     }

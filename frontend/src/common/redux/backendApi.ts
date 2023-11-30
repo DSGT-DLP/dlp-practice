@@ -50,5 +50,13 @@ export const backendApi = createApi({
       }
     },
   }),
-  endpoints: () => ({}),
+  endpoints: (builder) => ({
+    getDatasetByName: builder.query<any, string>({
+      query: (name) => {
+        return {
+          url: `/api/training/datasets/default/${name}/all`,
+        };
+      },
+    }),
+  }),
 });

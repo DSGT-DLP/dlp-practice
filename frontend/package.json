@@ -11,6 +11,7 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.9.3",
+    "@mui/x-charts": "^6.18.2",
     "@mui/x-data-grid": "^6.0.4",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/react": "^14.0.0",

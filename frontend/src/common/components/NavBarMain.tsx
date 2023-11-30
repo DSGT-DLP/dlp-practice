@@ -101,6 +101,11 @@ const NavbarMain = () => {
               }}
             >
               <Grid item>
+                <Link href="/andrew" passHref className="nav-link">
+                  Andrew
+                </Link>
+              </Grid>
+              <Grid item>
                 {isSignedIn(user) ? (
                   <Link href="/train" passHref className="nav-link">
                     Train
